@@ -1,0 +1,17 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Speed_Run Simulator", "DarkTheme")
+local Tab = Window:NewTab("Autofarm")
+local AutofarmSection = Tab:NewSection("Autofarm")
+AutofarmSection:NewButton("Autospeed", "get alot of speed", function()
+while wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("AddSpeed"):FireServer()
+end
+    print("Clicked")
+end)
+
+AutofarmSection:NewButton("Autorebirth", "Lots of rebirth", function()
+while wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rebirth"):FireServer()
+end
+    print("Clicked")
+end)
